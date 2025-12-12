@@ -926,6 +926,45 @@ body {
     color: #06B6D4;
 }
 
+/* Skills Responsive */
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .tech-stack-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .skills-content h1 {
+        font-size: 20px;
+    }
+
+    .skill-category h3 {
+        font-size: 13px;
+    }
+
+    .skill-category li {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-content {
+        padding: 0 5px;
+    }
+
+    .skill-category {
+        padding: 12px;
+    }
+
+    .skill-category ul {
+        padding-left: 15px;
+    }
+}
+
 /* Project Cards */
 .projects-grid {
     display: grid;
