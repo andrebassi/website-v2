@@ -1218,6 +1218,47 @@ body {
         height: calc(100% - 38px) !important;
         overflow-y: auto !important;
     }
+
+    /* Video responsivo - técnica padding-bottom 16:9 */
+    .window-content:has(.video-window) {
+        padding: 0 !important;
+        overflow: hidden !important;
+        background: #000 !important;
+    }
+
+    .video-window {
+        position: relative !important;
+        width: 100% !important;
+        height: 0 !important;
+        padding-bottom: 56.25% !important; /* 16:9 = 9/16 = 0.5625 */
+        background: #000 !important;
+        overflow: hidden !important;
+    }
+
+    .video-window iframe {
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        border: none !important;
+    }
+
+    /* PDF responsivo - tela cheia */
+    .pdf-window {
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+    .pdf-window iframe {
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+    .window-content:has(.pdf-window) {
+        padding: 0 !important;
+        overflow: hidden !important;
+    }
 }
 
 @media (max-width: 768px) {
