@@ -848,6 +848,84 @@ body {
     margin-top: 6px;
 }
 
+/* Skills Grid */
+.skills-content {
+    padding: 0 10px;
+}
+
+.skills-content h1 {
+    margin-bottom: 20px;
+}
+
+.skills-content h2 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.skill-category {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    padding: 16px;
+    transition: all 0.2s ease;
+}
+
+.skill-category:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(233, 84, 32, 0.3);
+}
+
+.skill-category h3 {
+    font-size: 14px;
+    margin-bottom: 12px;
+    color: var(--ubuntu-orange);
+}
+
+.skill-category ul {
+    margin: 0;
+    padding-left: 18px;
+}
+
+.skill-category li {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+    line-height: 1.4;
+}
+
+.tech-stack-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.tech-stack-grid h4 {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.tech-stack-grid .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.tag.cyan {
+    background: rgba(6, 182, 212, 0.15);
+    color: #06B6D4;
+}
+
 /* Project Cards */
 .projects-grid {
     display: grid;

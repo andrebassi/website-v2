@@ -687,54 +687,110 @@ class DesktopOS {
 
             skills: {
                 title: 'Skills',
-                width: '650px',
-                height: '550px',
+                width: '850px',
+                height: '700px',
                 maximized: true,
                 html: `
-                    <h1>Tecnologias</h1>
-                    <p class="subtitle">Stack técnico que utilizo no dia a dia.</p>
+                    <div class="skills-content">
+                        <h1>Pontos Técnicos e Experiência</h1>
 
-                    <h3>Cloud & Plataformas</h3>
-                    <div class="tags">
-                        <span class="tag">AWS</span>
-                        <span class="tag">GCP</span>
-                        <span class="tag">Azure</span>
-                        <span class="tag">OCI</span>
-                        <span class="tag">Cloudflare</span>
-                    </div>
+                        <div class="skills-grid">
+                            <div class="skill-category">
+                                <h3>🐳 Containers & Kubernetes</h3>
+                                <ul>
+                                    <li>Deploy de serviços com containers (Kubernetes, Docker, Kaniko) em cloud e on-premises</li>
+                                    <li>Gestão de clusters Kubernetes (EKS, GKE, AKS, OCI): provisionamento, upgrade, troubleshooting</li>
+                                    <li>Projetos IoT com Kubernetes (k3s, k0s), integração edge-cloud</li>
+                                    <li>Templates Helm 3, parametrização de deploys e gestão de ambientes</li>
+                                </ul>
+                            </div>
 
-                    <h3>Containers & Orquestração</h3>
-                    <div class="tags">
-                        <span class="tag blue">Kubernetes</span>
-                        <span class="tag blue">Docker</span>
-                        <span class="tag blue">Helm</span>
-                        <span class="tag blue">Istio</span>
-                        <span class="tag blue">ArgoCD</span>
-                    </div>
+                            <div class="skill-category">
+                                <h3>🏗️ Infrastructure as Code</h3>
+                                <ul>
+                                    <li>Arquitetura e automação com Terraform e Ansible, módulos reutilizáveis</li>
+                                    <li>Ambientes multi-cloud, cloud privada, bare metal e redes de alta performance</li>
+                                    <li>Governança de ambientes híbridos, gestão de custos e otimização</li>
+                                    <li>Providers customizados e automação de provisionamento</li>
+                                </ul>
+                            </div>
 
-                    <h3>IaC & Automação</h3>
-                    <div class="tags">
-                        <span class="tag orange">Terraform</span>
-                        <span class="tag orange">Ansible</span>
-                        <span class="tag orange">Pulumi</span>
-                        <span class="tag orange">GitLab CI</span>
-                    </div>
+                            <div class="skill-category">
+                                <h3>🌐 Service Mesh & Networking</h3>
+                                <ul>
+                                    <li>Operação de Service Mesh (Istio): mTLS, VirtualServices, Gateways, rate limit</li>
+                                    <li>APIs e Load Balancers (Kong, Nginx, Istio, Keycloak)</li>
+                                    <li>Networking avançado: TCP/IP, firewalls, roteamento, DNS, VPN</li>
+                                    <li>VPNs (WireGuard, OpenVPN) para integração cloud e bare metal</li>
+                                </ul>
+                            </div>
 
-                    <h3>Linguagens</h3>
-                    <div class="tags">
-                        <span class="tag green">Go</span>
-                        <span class="tag green">Rust</span>
-                        <span class="tag green">Python</span>
-                        <span class="tag green">TypeScript</span>
-                        <span class="tag green">Bash</span>
-                    </div>
+                            <div class="skill-category">
+                                <h3>🔄 CI/CD & DevSecOps</h3>
+                                <ul>
+                                    <li>CI/CD (GitLab, Bitbucket, GitHub Actions, Tekton) para build, teste e deploy</li>
+                                    <li>Segurança DevSecOps: SAST, DAST, IAST, scanning de leaks, compliance</li>
+                                    <li>Testes automatizados de software, infraestrutura e segurança</li>
+                                    <li>Integração de sistemas críticos e resposta a incidentes</li>
+                                </ul>
+                            </div>
 
-                    <h3>Observabilidade</h3>
-                    <div class="tags">
-                        <span class="tag purple">Prometheus</span>
-                        <span class="tag purple">Grafana</span>
-                        <span class="tag purple">Datadog</span>
-                        <span class="tag purple">ELK Stack</span>
+                            <div class="skill-category">
+                                <h3>📊 Observabilidade</h3>
+                                <ul>
+                                    <li>Monitoramento (Prometheus, Grafana, Datadog, Dynatrace, NewRelic)</li>
+                                    <li>APM, logging distribuído e tracing</li>
+                                    <li>Arquitetura escalável e tolerante a falhas para alta demanda</li>
+                                    <li>Ambientes regulados e alta disponibilidade</li>
+                                </ul>
+                            </div>
+
+                            <div class="skill-category">
+                                <h3>👥 Liderança & Cultura</h3>
+                                <ul>
+                                    <li>Liderança técnica em modernização e transformação digital</li>
+                                    <li>Documentação, treinamento e padronização de práticas DevOps</li>
+                                    <li>Definição de roadmaps técnicos e mentoring de equipes</li>
+                                    <li>Disseminação de cultura DevOps e Cloud Native</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <h2>Tech Stack</h2>
+                        <div class="tech-stack-grid">
+                            <div>
+                                <h4>Cloud & Plataformas</h4>
+                                <div class="tags">
+                                    <span class="tag blue">Kubernetes</span>
+                                    <span class="tag">AWS</span>
+                                    <span class="tag">GCP</span>
+                                    <span class="tag">Azure</span>
+                                    <span class="tag">OCI</span>
+                                    <span class="tag orange">Terraform</span>
+                                    <span class="tag purple">Istio</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h4>Linguagens</h4>
+                                <div class="tags">
+                                    <span class="tag green">Go</span>
+                                    <span class="tag green">Rust</span>
+                                    <span class="tag green">Python</span>
+                                    <span class="tag green">Node.js</span>
+                                    <span class="tag green">Java</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h4>AI & LLMs</h4>
+                                <div class="tags">
+                                    <span class="tag cyan">RAG Pipelines</span>
+                                    <span class="tag cyan">Agentic AI</span>
+                                    <span class="tag cyan">Vertex AI</span>
+                                    <span class="tag cyan">Bedrock</span>
+                                    <span class="tag cyan">MCP</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 `
             },
