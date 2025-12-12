@@ -1139,29 +1139,105 @@ body {
     }
 }
 
+@media (max-width: 1024px) {
+    .desktop-icons {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        justify-content: flex-start !important;
+        align-items: flex-start !important;
+        gap: 15px !important;
+        padding: 15px !important;
+    }
+
+    .desktop-icon {
+        position: static !important;
+        right: auto !important;
+        top: auto !important;
+        width: 80px !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        padding: 8px !important;
+        background: transparent !important;
+        border-radius: 8px !important;
+    }
+
+    .desktop-icon .icon-image {
+        width: 48px !important;
+        height: 48px !important;
+        min-width: 48px !important;
+        margin-bottom: 6px !important;
+    }
+
+    .desktop-icon .icon-label {
+        text-align: center !important;
+        font-size: 11px !important;
+    }
+
+    .desktop-icon.right-icon,
+    .desktop-icon.pdf-1,
+    .desktop-icon.pdf-2,
+    .desktop-icon.video-1,
+    .desktop-icon.video-2,
+    .desktop-icon.video-3 {
+        position: static !important;
+        right: auto !important;
+        top: auto !important;
+    }
+
+    /* Maximizar todas as janelas em tablets/mobile */
+    .windows-container {
+        position: fixed !important;
+        left: 68px !important;
+        top: 28px !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        width: calc(100vw - 68px) !important;
+        height: calc(100vh - 28px) !important;
+    }
+
+    .window {
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        max-width: 100% !important;
+        max-height: 100% !important;
+        min-width: unset !important;
+        min-height: unset !important;
+        border-radius: 0 !important;
+        margin: 0 !important;
+        transform: none !important;
+    }
+
+    .window-content {
+        height: calc(100% - 38px) !important;
+        overflow-y: auto !important;
+    }
+}
+
 @media (max-width: 768px) {
     .desktop {
         padding: 48px 10px 10px 10px;
     }
 
     .dock {
-        display: none;
+        display: none !important;
     }
 
+    /* Janela ocupa tela toda sem dock */
     .windows-container {
-        left: 0;
-    }
-
-    .desktop-icons {
-        justify-content: center;
+        left: 0 !important;
+        width: 100vw !important;
     }
 
     .window {
-        min-width: calc(100% - 20px) !important;
-        left: 10px !important;
-        right: 10px !important;
-        width: calc(100% - 20px) !important;
-        top: 50px !important;
+        width: 100% !important;
+        max-width: 100% !important;
     }
 
     .stats-grid {
