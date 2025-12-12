@@ -1,0 +1,156 @@
+/* ===== New Year Animation (Dec 31 - Jan 7) ===== */
+
+/* Fireworks Canvas */
+#fireworks-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9998;
+    display: none;
+}
+
+#fireworks-canvas.active {
+    display: block;
+}
+
+/* New Year Banner */
+.newyear-banner {
+    position: fixed;
+    bottom: 0;
+    left: 68px; /* After dock */
+    right: 0;
+    z-index: 1001;
+    display: none;
+    background: linear-gradient(90deg,
+        #1a1a2e 0%,
+        #16213e 25%,
+        #0f3460 50%,
+        #16213e 75%,
+        #1a1a2e 100%);
+    border-top: 2px solid;
+    border-image: linear-gradient(90deg, #ffd700, #ff6b6b, #ffd700) 1;
+    padding: 6px 0;
+    text-align: center;
+    overflow: hidden;
+}
+
+.newyear-banner.active {
+    display: block;
+}
+
+.newyear-banner-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    animation: sparkle 2s ease-in-out infinite;
+}
+
+.newyear-emoji {
+    font-size: 1.2rem;
+    animation: bounce 0.6s ease-in-out infinite alternate;
+}
+
+.newyear-emoji:nth-child(1) { animation-delay: 0s; }
+.newyear-emoji:nth-child(3) { animation-delay: 0.2s; }
+.newyear-emoji:nth-child(5) { animation-delay: 0.4s; }
+
+.newyear-text {
+    font-size: 1.1rem;
+    font-weight: 600;
+    background: linear-gradient(90deg, #ffd700, #ffec8b, #ffd700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+    animation: glow-text 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes sparkle {
+    0%, 100% {
+        filter: brightness(1);
+    }
+    50% {
+        filter: brightness(1.2);
+    }
+}
+
+@keyframes bounce {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-3px);
+    }
+}
+
+@keyframes glow-text {
+    from {
+        filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.5));
+    }
+    to {
+        filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.8));
+    }
+}
+
+/* New Year Greeting Style */
+.newyear-greeting {
+    background: linear-gradient(90deg, #ffd700, #ff6b6b, #ffd700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shimmer 2s ease-in-out infinite;
+    background-size: 200% auto;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: 0% center;
+    }
+    100% {
+        background-position: 200% center;
+    }
+}
+
+/* Responsive New Year */
+@media (max-width: 768px) {
+    .newyear-banner {
+        left: 0;
+        bottom: 0;
+        padding: 4px 0;
+    }
+
+    .newyear-text {
+        font-size: 0.75rem;
+    }
+
+    .newyear-emoji {
+        font-size: 1rem;
+    }
+
+    .newyear-banner-content {
+        gap: 10px;
+    }
+}
+
+/* Fireworks particles glow effect */
+.firework-glow {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    animation: firework-explode 1s ease-out forwards;
+}
+
+@keyframes firework-explode {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(3);
+        opacity: 0;
+    }
+}

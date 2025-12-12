@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/desktop.css">
+    <link rel="stylesheet" href="css/christmas.css">
+    <link rel="stylesheet" href="css/newyear.css">
 </head>
 <body>
     <!-- Ubuntu Top Panel -->
@@ -27,9 +29,11 @@
     <div class="desktop" id="desktop">
         <!-- Wallpaper Slideshow -->
         <div class="wallpaper-container">
-            <div class="wallpaper active" style="background-image: url('https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?w=1920&q=80')"></div>
-            <div class="wallpaper" style="background-image: url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1920&q=80')"></div>
-            <div class="wallpaper" style="background-image: url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=1920&q=80')"></div>
+            <div class="wallpaper active" style="background-image: url('https://images.unsplash.com/photo-1506399558188-acca6f8cbf41?w=1920&q=80')"></div>
+            <div class="wallpaper" style="background-image: url('https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=1920&q=80')"></div>
+            <div class="wallpaper" style="background-image: url('https://images.unsplash.com/photo-1484557052118-f32bd25b45b5?w=1920&q=80')"></div>
+            <div class="wallpaper" style="background-image: url('https://images.unsplash.com/photo-1629654297299-c8506221ca97?w=1920&q=80')"></div>
+            <div class="wallpaper" style="background-image: url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1920&q=80')"></div>
             <div class="wallpaper-overlay"></div>
         </div>
         <!-- Desktop Icons -->
@@ -42,6 +46,17 @@
                     </svg>
                 </div>
                 <span class="icon-label">Sobre Mim</span>
+            </div>
+
+            <div class="desktop-icon" data-window="articles">
+                <div class="icon-image" style="background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);">
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" stroke="white" stroke-width="1.5" fill="none"/>
+                        <line x1="8" y1="13" x2="16" y2="13" stroke="white" stroke-width="1.5"/>
+                        <line x1="8" y1="17" x2="14" y2="17" stroke="white" stroke-width="1.5"/>
+                    </svg>
+                </div>
+                <span class="icon-label" style="white-space: nowrap;">Artigos Técnicos</span>
             </div>
 
             <div class="desktop-icon" data-window="opensource">
@@ -96,7 +111,29 @@
                 <span class="icon-label">Terminal</span>
             </div>
 
-            <div class="desktop-icon video-icon" data-window="video-runner-codes">
+            <div class="desktop-icon right-icon pdf-1" data-window="pdf-carta">
+                <div class="icon-image" style="background: linear-gradient(135deg, #DC2626 0%, #B91C1C 100%);">
+                    <svg viewBox="0 0 24 24" fill="white">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                        <polyline points="14 2 14 8 20 8" fill="none" stroke="white" stroke-width="1.5"/>
+                        <text x="12" y="16" font-size="6" fill="#B91C1C" text-anchor="middle" font-weight="bold">PDF</text>
+                    </svg>
+                </div>
+                <span class="icon-label">Carta de Apresentação</span>
+            </div>
+
+            <div class="desktop-icon right-icon pdf-2" data-window="pdf-curriculum">
+                <div class="icon-image" style="background: linear-gradient(135deg, #DC2626 0%, #B91C1C 100%);">
+                    <svg viewBox="0 0 24 24" fill="white">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                        <polyline points="14 2 14 8 20 8" fill="none" stroke="white" stroke-width="1.5"/>
+                        <text x="12" y="16" font-size="6" fill="#B91C1C" text-anchor="middle" font-weight="bold">PDF</text>
+                    </svg>
+                </div>
+                <span class="icon-label">Curriculum</span>
+            </div>
+
+            <div class="desktop-icon right-icon video-1" data-window="video-runner-codes">
                 <div class="icon-image" style="background: linear-gradient(135deg, #DC2626 0%, #EF4444 100%);">
                     <svg viewBox="0 0 24 24" fill="white">
                         <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
@@ -105,7 +142,7 @@
                 <span class="icon-label">Runner Codes</span>
             </div>
 
-            <div class="desktop-icon video-icon" data-window="video-edge-resiliente">
+            <div class="desktop-icon right-icon video-2" data-window="video-edge-resiliente">
                 <div class="icon-image" style="background: linear-gradient(135deg, #DC2626 0%, #EF4444 100%);">
                     <svg viewBox="0 0 24 24" fill="white">
                         <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
@@ -114,7 +151,7 @@
                 <span class="icon-label">Edge Resiliente</span>
             </div>
 
-            <div class="desktop-icon video-icon" data-window="video-edgeproxy-caos">
+            <div class="desktop-icon right-icon video-3" data-window="video-edgeproxy-caos">
                 <div class="icon-image" style="background: linear-gradient(135deg, #DC2626 0%, #EF4444 100%);">
                     <svg viewBox="0 0 24 24" fill="white">
                         <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
@@ -204,6 +241,9 @@
         </div>
     </template>
 
+    <script src="js/variables.js"></script>
+    <script src="js/christmas.js"></script>
+    <script src="js/newyear.js"></script>
     <script src="js/desktop.js"></script>
 </body>
 </html>

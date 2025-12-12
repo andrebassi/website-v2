@@ -490,10 +490,131 @@ class DesktopOS {
                 `
             },
 
+            articles: {
+                title: 'Artigos Técnicos',
+                width: '700px',
+                height: '580px',
+                maximized: true,
+                html: `
+                    <h1>Artigos Técnicos</h1>
+                    <p class="subtitle">Conteúdo técnico que publico no Notion.</p>
+
+                    <div class="articles-grid">
+                        <a href="https://andrebassi.notion.site/Runtime-Seguro-e-Isolado-para-C-digo-Gerado-por-IA-denominado-Runner-Codes-2bdaec74498780f1a6bbd050df192272" target="_blank" class="article-card">
+                            <div class="article-icon" style="background: linear-gradient(135deg, #06B6D4 0%, #0891B2 100%);">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                    <rect x="3" y="3" width="18" height="18" rx="2"/>
+                                    <path d="M9 9h6M9 13h6M9 17h4"/>
+                                </svg>
+                            </div>
+                            <div class="article-info">
+                                <h3>Runtime Seguro e Isolado para Código Gerado por IA</h3>
+                                <p>Runner Codes: ambiente de execução seguro para código gerado por LLMs.</p>
+                                <div class="article-tags">
+                                    <span class="tag cyan">Firecracker</span>
+                                    <span class="tag">LLM</span>
+                                    <span class="tag">Security</span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="https://andrebassi.notion.site/Configurando-um-Homelab-com-Proxmox-Talos-Linux-e-Kubernetes-com-Cloudflare-Tunnel-1ebaec7449878055920af984038acb82" target="_blank" class="article-card">
+                            <div class="article-icon" style="background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%);">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                    <rect x="2" y="3" width="20" height="14" rx="2"/>
+                                    <path d="M8 21h8M12 17v4"/>
+                                </svg>
+                            </div>
+                            <div class="article-info">
+                                <h3>Homelab com Proxmox, Talos Linux e Kubernetes</h3>
+                                <p>Configurando um homelab completo com Cloudflare Tunnel.</p>
+                                <div class="article-tags">
+                                    <span class="tag purple">Proxmox</span>
+                                    <span class="tag">Talos</span>
+                                    <span class="tag">K8s</span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="https://andrebassi.notion.site/Talos-Linux-52cb9defa4b647d8a686d05901ec082e" target="_blank" class="article-card">
+                            <div class="article-icon" style="background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <path d="M12 6v6l4 2"/>
+                                </svg>
+                            </div>
+                            <div class="article-info">
+                                <h3>Talos Linux</h3>
+                                <p>Sistema operacional imutável projetado para Kubernetes.</p>
+                                <div class="article-tags">
+                                    <span class="tag orange">Talos</span>
+                                    <span class="tag">Linux</span>
+                                    <span class="tag">Immutable</span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="https://andrebassi.notion.site/Keycloak-seguro-com-Chainguard-1c76160532f44e81a3af4c4fe8bf69eb" target="_blank" class="article-card">
+                            <div class="article-icon" style="background: linear-gradient(135deg, #EF4444 0%, #DC2626 100%);">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                    <rect x="3" y="11" width="18" height="11" rx="2"/>
+                                    <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                                </svg>
+                            </div>
+                            <div class="article-info">
+                                <h3>Keycloak Seguro com Chainguard</h3>
+                                <p>Implementando Keycloak com imagens seguras Chainguard.</p>
+                                <div class="article-tags">
+                                    <span class="tag red">Keycloak</span>
+                                    <span class="tag">Chainguard</span>
+                                    <span class="tag">Security</span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="https://andrebassi.notion.site/Wolfi-com-Dockerfiles-Uma-Abordagem-Segura-e-Eficiente-a1bf2101ba724cc0a58b9184b4927294" target="_blank" class="article-card">
+                            <div class="article-icon" style="background: linear-gradient(135deg, #10B981 0%, #059669 100%);">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                    <path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3z"/>
+                                    <path d="M12 12l8-4.5M12 12v9M12 12L4 7.5"/>
+                                </svg>
+                            </div>
+                            <div class="article-info">
+                                <h3>Wolfi com Dockerfiles</h3>
+                                <p>Uma abordagem segura e eficiente para containers.</p>
+                                <div class="article-tags">
+                                    <span class="tag green">Wolfi</span>
+                                    <span class="tag">Docker</span>
+                                    <span class="tag">Security</span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="https://andrebassi.notion.site/Melhores-Pr-ticas-de-Seguran-a-no-Kubernetes-Um-Guia-T-cnico-passo-a-passo-110aec744987804d8533c127faff0608" target="_blank" class="article-card">
+                            <div class="article-icon" style="background: linear-gradient(135deg, #326CE5 0%, #4A90D9 100%);">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                </svg>
+                            </div>
+                            <div class="article-info">
+                                <h3>Melhores Práticas de Segurança no Kubernetes</h3>
+                                <p>Guia técnico passo a passo para segurança em K8s.</p>
+                                <div class="article-tags">
+                                    <span class="tag blue">Kubernetes</span>
+                                    <span class="tag">Security</span>
+                                    <span class="tag">Best Practices</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                `
+            },
+
             opensource: {
                 title: 'Open Source',
                 width: '650px',
                 height: '550px',
+                maximized: true,
                 html: `
                     <h1>Projetos Open Source</h1>
                     <p class="subtitle">Projetos que desenvolvo e mantenho.</p>
@@ -568,6 +689,7 @@ class DesktopOS {
                 title: 'Skills',
                 width: '650px',
                 height: '550px',
+                maximized: true,
                 html: `
                     <h1>Tecnologias</h1>
                     <p class="subtitle">Stack técnico que utilizo no dia a dia.</p>
@@ -621,6 +743,7 @@ class DesktopOS {
                 title: 'Experiência',
                 width: '650px',
                 height: '550px',
+                maximized: true,
                 html: `
                     <h1>Experiência</h1>
                     <p class="subtitle">Mais de 20 anos construindo sistemas de alta escala.</p>
@@ -732,6 +855,30 @@ class DesktopOS {
                             referrerpolicy="strict-origin-when-cross-origin"
                             allowfullscreen>
                         </iframe>
+                    </div>
+                `
+            },
+
+            'pdf-carta': {
+                title: 'Carta de Apresentação',
+                width: '800px',
+                height: '600px',
+                maximized: true,
+                html: `
+                    <div class="pdf-window">
+                        <iframe src="docs/carta-apresentacao.pdf" frameborder="0"></iframe>
+                    </div>
+                `
+            },
+
+            'pdf-curriculum': {
+                title: 'Curriculum',
+                width: '800px',
+                height: '600px',
+                maximized: true,
+                html: `
+                    <div class="pdf-window">
+                        <iframe src="docs/curriculo.pdf" frameborder="0"></iframe>
                     </div>
                 `
             },
