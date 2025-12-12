@@ -978,7 +978,35 @@ ossyNMMMNyMMhsssssssssssssshmmmhssssssso
     }
 }
 
+// URL to Window mapping
+const routeToWindow = {
+    '/opensource': 'opensource',
+    '/open-source': 'opensource',
+    '/projetos': 'opensource',
+    '/projects': 'opensource',
+    '/about': 'about',
+    '/sobre': 'about',
+    '/skills': 'skills',
+    '/tecnologias': 'skills',
+    '/experience': 'experience',
+    '/experiencia': 'experience',
+    '/contact': 'contact',
+    '/contato': 'contact',
+    '/terminal': 'terminal',
+    '/articles': 'articles',
+    '/artigos': 'articles',
+    '/edgeproxy': 'edgeproxy',
+    '/infra-operator': 'infra-operator',
+    '/runner-codes': 'runner-codes'
+};
+
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
     window.desktop = new DesktopOS();
+
+    // Check URL path and open corresponding window
+    const path = window.location.pathname.toLowerCase();
+    if (routeToWindow[path]) {
+        window.desktop.openWindow(routeToWindow[path]);
+    }
 });
