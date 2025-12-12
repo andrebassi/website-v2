@@ -1,6 +1,8 @@
 # SPA routes - middleware handles language
 /opensource/* /index.html 200!
 /opensource /index.html 200!
+/open-source/* /index.html 200!
+/open-source /index.html 200!
 /projetos/* /index.html 200!
 /projetos /index.html 200!
 /projects/* /index.html 200!
@@ -33,3 +35,31 @@
 /infra-operator /index.html 200!
 /runner-codes/* /index.html 200!
 /runner-codes /index.html 200!
+# Videos
+/video-edge-resiliente/* /index.html 200!
+/video-edge-resiliente /index.html 200!
+/edge-resiliente/* /index.html 200!
+/edge-resiliente /index.html 200!
+/video-edgeproxy-caos/* /index.html 200!
+/video-edgeproxy-caos /index.html 200!
+/edgeproxy-caos/* /index.html 200!
+/edgeproxy-caos /index.html 200!
+/video-runner-codes/* /index.html 200!
+/video-runner-codes /index.html 200!
+# PDFs
+/carta/* /index.html 200!
+/carta /index.html 200!
+/carta-apresentacao/* /index.html 200!
+/carta-apresentacao /index.html 200!
+/pdf-carta/* /index.html 200!
+/pdf-carta /index.html 200!
+/curriculum/* /index.html 200!
+/curriculum /index.html 200!
+/curriculo/* /index.html 200!
+/curriculo /index.html 200!
+/pdf-curriculum/* /index.html 200!
+/pdf-curriculum /index.html 200!
+/cover-letter/* /index.html 200!
+/cover-letter /index.html 200!
+/resume/* /index.html 200!
+/resume /index.html 200!

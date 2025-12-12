@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://v2.andrebassi.com.br/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://v2.andrebassi.com.br/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://v2.andrebassi.com.br/?lang=en"/>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- About / Sobre -->
+  <url>
+    <loc>https://v2.andrebassi.com.br/sobre</loc>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://v2.andrebassi.com.br/sobre"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://v2.andrebassi.com.br/about"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://v2.andrebassi.com.br/about</loc>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://v2.andrebassi.com.br/sobre"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://v2.andrebassi.com.br/about"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Open Source / Projetos -->
+  <url>
+    <loc>https://v2.andrebassi.com.br/opensource</loc>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://v2.andrebassi.com.br/projetos"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://v2.andrebassi.com.br/projects"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://v2.andrebassi.com.br/projetos</loc>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://v2.andrebassi.com.br/projetos"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://v2.andrebassi.com.br/projects"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://v2.andrebassi.com.br/projects</loc>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://v2.andrebassi.com.br/projetos"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://v2.andrebassi.com.br/projects"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Skills / Tecnologias -->
+  <url>
+    <loc>https://v2.andrebassi.com.br/skills</loc>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://v2.andrebassi.com.br/tecnologias"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://v2.andrebassi.com.br/skills"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://v2.andrebassi.com.br/tecnologias</loc>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://v2.andrebassi.com.br/tecnologias"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://v2.andrebassi.com.br/skills"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Experience / Experiencia -->
+  <url>
+    <loc>https://v2.andrebassi.com.br/experience</loc>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://v2.andrebassi.com.br/experiencia"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://v2.andrebassi.com.br/experience"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://v2.andrebassi.com.br/experiencia</loc>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://v2.andrebassi.com.br/experiencia"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://v2.andrebassi.com.br/experience"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Contact / Contato -->
+  <url>
+    <loc>https://v2.andrebassi.com.br/contact</loc>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://v2.andrebassi.com.br/contato"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://v2.andrebassi.com.br/contact"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://v2.andrebassi.com.br/contato</loc>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://v2.andrebassi.com.br/contato"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://v2.andrebassi.com.br/contact"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Articles / Artigos -->
+  <url>
+    <loc>https://v2.andrebassi.com.br/articles</loc>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://v2.andrebassi.com.br/artigos"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://v2.andrebassi.com.br/articles"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://v2.andrebassi.com.br/artigos</loc>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://v2.andrebassi.com.br/artigos"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://v2.andrebassi.com.br/articles"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Terminal -->
+  <url>
+    <loc>https://v2.andrebassi.com.br/terminal</loc>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://v2.andrebassi.com.br/terminal"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://v2.andrebassi.com.br/terminal"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- edgeProxy -->
+  <url>
+    <loc>https://v2.andrebassi.com.br/edgeproxy</loc>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://v2.andrebassi.com.br/edgeproxy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://v2.andrebassi.com.br/edgeproxy"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- infra-operator -->
+  <url>
+    <loc>https://v2.andrebassi.com.br/infra-operator</loc>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://v2.andrebassi.com.br/infra-operator"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://v2.andrebassi.com.br/infra-operator"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- runner-codes -->
+  <url>
+    <loc>https://v2.andrebassi.com.br/runner-codes</loc>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://v2.andrebassi.com.br/runner-codes"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://v2.andrebassi.com.br/runner-codes"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Videos -->
+  <url>
+    <loc>https://v2.andrebassi.com.br/edge-resiliente</loc>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://v2.andrebassi.com.br/edge-resiliente"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://v2.andrebassi.com.br/edge-resiliente"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://v2.andrebassi.com.br/edgeproxy-caos</loc>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://v2.andrebassi.com.br/edgeproxy-caos"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://v2.andrebassi.com.br/edgeproxy-caos"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://v2.andrebassi.com.br/video-runner-codes</loc>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://v2.andrebassi.com.br/video-runner-codes"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://v2.andrebassi.com.br/video-runner-codes"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- PDFs -->
+  <url>
+    <loc>https://v2.andrebassi.com.br/carta</loc>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://v2.andrebassi.com.br/carta"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://v2.andrebassi.com.br/cover-letter"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://v2.andrebassi.com.br/cover-letter</loc>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://v2.andrebassi.com.br/carta"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://v2.andrebassi.com.br/cover-letter"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://v2.andrebassi.com.br/curriculo</loc>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://v2.andrebassi.com.br/curriculo"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://v2.andrebassi.com.br/resume"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://v2.andrebassi.com.br/resume</loc>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://v2.andrebassi.com.br/curriculo"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://v2.andrebassi.com.br/resume"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+</urlset>

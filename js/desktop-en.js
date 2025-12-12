@@ -1053,7 +1053,22 @@ const routeToWindow = {
     '/artigos': 'articles',
     '/edgeproxy': 'edgeproxy',
     '/infra-operator': 'infra-operator',
-    '/runner-codes': 'runner-codes'
+    '/runner-codes': 'runner-codes',
+    // Videos
+    '/video-edge-resiliente': 'video-edge-resiliente',
+    '/edge-resiliente': 'video-edge-resiliente',
+    '/video-edgeproxy-caos': 'video-edgeproxy-caos',
+    '/edgeproxy-caos': 'video-edgeproxy-caos',
+    '/video-runner-codes': 'video-runner-codes',
+    // PDFs
+    '/carta': 'pdf-carta',
+    '/carta-apresentacao': 'pdf-carta',
+    '/pdf-carta': 'pdf-carta',
+    '/cover-letter': 'pdf-carta',
+    '/curriculum': 'pdf-curriculum',
+    '/curriculo': 'pdf-curriculum',
+    '/pdf-curriculum': 'pdf-curriculum',
+    '/resume': 'pdf-curriculum'
 };
 
 // Initialize
