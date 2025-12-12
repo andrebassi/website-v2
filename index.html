@@ -3,710 +3,207 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>André Bassi | Engenheiro de Plataforma & Arquiteto Cloud</title>
-    <meta name="description" content="Engenheiro de Plataforma & Arquiteto Cloud com mais de 20 anos de experiência em Kubernetes, multi-cloud, IA/LLMs e sistemas distribuídos.">
+    <title>André Bassi | Portfolio</title>
+    <meta name="description" content="André Bassi - Platform Engineer & Cloud Architect. Portfolio interativo estilo desktop.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <!-- CSS Modules -->
-    <link rel="stylesheet" href="css/variables.css">
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/navigation.css">
-    <link rel="stylesheet" href="css/hero.css">
-    <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/sections.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="css/christmas.css">
-    <link rel="stylesheet" href="css/newyear.css">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/desktop.css">
 </head>
-<body data-lang="pt">
-    <!-- Navigation -->
-    <nav class="nav">
-        <div class="nav-container">
-            <div class="nav-brand">
-                <a href="#" class="nav-logo">
-                    <span class="logo-symbol">&lt;/&gt;</span>
-                    <span class="logo-text">andrebassi</span>
-                </a>
-                <div class="nav-tagline">
-                    <span class="status">Disponível para novos desafios e oportunidades</span> <a href="docs/Andre-Bassi-Carta-de-Apresentacao.pdf" target="_blank">Carta</a> | <a href="docs/Andre-Bassi-Curriculo.pdf" target="_blank">Currículo</a> | <a href="https://linkedin.com/in/andrebassi" target="_blank">LinkedIn</a>
-                </div>
-            </div>
-            <div class="nav-links">
-                <a href="https://andrebassi.notion.site/" target="_blank">Artigos Técnicos</a>
-                <a href="#projects">Projetos Open Source</a>
-                <a href="#highlights">Destaques</a>
-                <a href="#experience">Experiência</a>
-                <a href="#about">Sobre</a>
-                <a href="#contact">Contato</a>
-                <a href="?lang=en" class="lang-switch" title="Switch to English">🇺🇸</a>
-            </div>
-            <button class="nav-toggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+<body>
+    <!-- Ubuntu Top Panel -->
+    <div class="top-panel">
+        <div class="panel-left">
+            <span class="activities-btn">Atividades</span>
         </div>
-    </nav>
+        <div class="panel-center" id="clock"></div>
+        <div class="panel-right">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0M1.42 9a16 16 0 0 1 21.16 0M8.53 16.11a6 6 0 0 1 6.95 0M12 20h.01"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+        </div>
+    </div>
 
-    <!-- Hero Section -->
-    <header class="hero">
-        <div class="hero-bg">
-            <canvas id="particle-canvas"></canvas>
-            <div class="hero-grid"></div>
+    <!-- Desktop -->
+    <div class="desktop" id="desktop">
+        <!-- Wallpaper Slideshow -->
+        <div class="wallpaper-container">
+            <div class="wallpaper active" style="background-image: url('https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?w=1920&q=80')"></div>
+            <div class="wallpaper" style="background-image: url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1920&q=80')"></div>
+            <div class="wallpaper" style="background-image: url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=1920&q=80')"></div>
+            <div class="wallpaper-overlay"></div>
         </div>
-        <div class="hero-content">
-            <h1 class="hero-title">
-                <span class="hero-greeting">Olá, eu sou</span>
-                <span class="hero-name">André Bassi</span>
-            </h1>
-            <p class="hero-subtitle">
-                <span class="typewriter">Engenheiro de Plataforma</span>
-                <span class="cursor">|</span>
-            </p>
-            <p class="hero-description">
-                Arquiteto Cloud com <strong>mais de 20 anos</strong> construindo infraestrutura escalável,
-                plataformas Kubernetes e sistemas de IA/LLM. Apaixonado por open source e
-                por resolver desafios complexos em sistemas distribuídos.
-            </p>
-            <div class="hero-cta">
-                <a href="#projects" class="btn btn-primary">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+        <!-- Desktop Icons -->
+        <div class="desktop-icons">
+            <div class="desktop-icon" data-window="about">
+                <div class="icon-image" style="background: linear-gradient(135deg, #e95420 0%, #f47b52 100%);">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                        <circle cx="12" cy="7" r="4"/>
                     </svg>
-                    Ver Projetos Open Source
-                </a>
-                <a href="#contact" class="btn btn-secondary">Entre em Contato</a>
-            </div>
-            <div class="hero-stats">
-                <div class="stat">
-                    <span class="stat-number">20+</span>
-                    <span class="stat-label">Anos de Experiência</span>
                 </div>
-                <div class="stat">
-                    <span class="stat-number">3</span>
-                    <span class="stat-label">Projetos Open Source</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number">18+</span>
-                    <span class="stat-label">Clusters K8s Criados</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- Articles Carousel -->
-        <div class="articles-carousel">
-            <span class="carousel-label">Artigos Mais Vistos:</span>
-            <div class="carousel-track">
-                <div class="carousel-items">
-                    <a href="https://andrebassi.notion.site/Runtime-Seguro-e-Isolado-para-C-digo-Gerado-por-IA-denominado-Runner-Codes-2bdaec74498780f1a6bbd050df192272" target="_blank" class="carousel-item">Runtime Seguro e Isolado para Código Gerado por IA denominado Runner Codes</a>
-                    <span class="carousel-divider">•</span>
-                    <a href="https://andrebassi.notion.site/Configurando-um-Homelab-com-Proxmox-Talos-Linux-e-Kubernetes-com-Cloudflare-Tunnel-1ebaec7449878055920af984038acb82" target="_blank" class="carousel-item">Configurando um Homelab com Proxmox, Talos Linux e Kubernetes com Cloudflare Tunnel</a>
-                    <span class="carousel-divider">•</span>
-                    <a href="https://andrebassi.notion.site/Talos-Linux-52cb9defa4b647d8a686d05901ec082e" target="_blank" class="carousel-item">Talos Linux</a>
-                    <span class="carousel-divider">•</span>
-                    <a href="https://andrebassi.notion.site/Keycloak-seguro-com-Chainguard-1c76160532f44e81a3af4c4fe8bf69eb" target="_blank" class="carousel-item">Keycloak seguro com Chainguard</a>
-                    <span class="carousel-divider">•</span>
-                    <a href="https://andrebassi.notion.site/Wolfi-com-Dockerfiles-Uma-Abordagem-Segura-e-Eficiente-a1bf2101ba724cc0a58b9184b4927294" target="_blank" class="carousel-item">Wolfi com Dockerfiles | Uma Abordagem Segura e Eficiente</a>
-                    <span class="carousel-divider">•</span>
-                    <a href="https://andrebassi.notion.site/Melhores-Pr-ticas-de-Seguran-a-no-Kubernetes-Um-Guia-T-cnico-passo-a-passo-110aec744987804d8533c127faff0608" target="_blank" class="carousel-item">Melhores Práticas de Segurança no Kubernetes</a>
-                    <span class="carousel-divider">•</span>
-                    <!-- Duplicate for seamless loop -->
-                    <a href="https://andrebassi.notion.site/Runtime-Seguro-e-Isolado-para-C-digo-Gerado-por-IA-denominado-Runner-Codes-2bdaec74498780f1a6bbd050df192272" target="_blank" class="carousel-item">Runtime Seguro e Isolado para Código Gerado por IA denominado Runner Codes</a>
-                    <span class="carousel-divider">•</span>
-                    <a href="https://andrebassi.notion.site/Configurando-um-Homelab-com-Proxmox-Talos-Linux-e-Kubernetes-com-Cloudflare-Tunnel-1ebaec7449878055920af984038acb82" target="_blank" class="carousel-item">Configurando um Homelab com Proxmox, Talos Linux e Kubernetes com Cloudflare Tunnel</a>
-                    <span class="carousel-divider">•</span>
-                    <a href="https://andrebassi.notion.site/Talos-Linux-52cb9defa4b647d8a686d05901ec082e" target="_blank" class="carousel-item">Talos Linux</a>
-                    <span class="carousel-divider">•</span>
-                    <a href="https://andrebassi.notion.site/Keycloak-seguro-com-Chainguard-1c76160532f44e81a3af4c4fe8bf69eb" target="_blank" class="carousel-item">Keycloak seguro com Chainguard</a>
-                    <span class="carousel-divider">•</span>
-                    <a href="https://andrebassi.notion.site/Wolfi-com-Dockerfiles-Uma-Abordagem-Segura-e-Eficiente-a1bf2101ba724cc0a58b9184b4927294" target="_blank" class="carousel-item">Wolfi com Dockerfiles | Uma Abordagem Segura e Eficiente</a>
-                    <span class="carousel-divider">•</span>
-                    <a href="https://andrebassi.notion.site/Melhores-Pr-ticas-de-Seguran-a-no-Kubernetes-Um-Guia-T-cnico-passo-a-passo-110aec744987804d8533c127faff0608" target="_blank" class="carousel-item">Melhores Práticas de Segurança no Kubernetes</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="hero-scroll">
-            <div class="scroll-indicator"></div>
-            <span>Role para explorar</span>
-        </div>
-    </header>
-
-
-    <!-- Open Source Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Projetos</span>
-                <h2 class="section-title">Open Source</h2>
+                <span class="icon-label">Sobre Mim</span>
             </div>
 
-            <div class="projects-grid">
-                <!-- edgeProxy -->
-                <article class="project-card" data-href="https://edgeproxy-docs.runner.codes/">
-                    <div class="project-header">
-                        <div class="project-icon rust">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="12" cy="12" r="3"/>
-                                <circle cx="4" cy="6" r="2"/>
-                                <circle cx="20" cy="6" r="2"/>
-                                <circle cx="4" cy="18" r="2"/>
-                                <circle cx="20" cy="18" r="2"/>
-                                <path d="M6 6.5L9.5 10.5"/>
-                                <path d="M18 6.5L14.5 10.5"/>
-                                <path d="M6 17.5L9.5 13.5"/>
-                                <path d="M18 17.5L14.5 13.5"/>
-                            </svg>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://edgeproxy-docs.runner.codes/" target="_blank" class="project-link" title="Site">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                    <h3 class="project-title">edgeProxy</h3>
-                    <p class="project-tagline">Proxy TCP Distribuído de Alta Performance</p>
-                    <p class="project-description">
-                        Proxy TCP geo-aware escrito em Rust, projetado para POPs edge globais.
-                        Roteia conexões baseado em proximidade geográfica, saúde do backend, carga e capacidade.
-                        Inclui replicação SQLite com protocolo SWIM gossip.
-                    </p>
-                    <div class="project-features">
-                        <div class="feature">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg>
-                            <span>Roteamento Geo-Aware</span>
-                        </div>
-                        <div class="feature">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg>
-                            <span>490+ Testes Unitários</span>
-                        </div>
-                        <div class="feature">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg>
-                            <span>Replicação QUIC</span>
-                        </div>
-                        <div class="feature">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg>
-                            <span>Arquitetura Hexagonal</span>
-                        </div>
-                    </div>
-                    <div class="project-tech">
-                        <span class="tech-tag rust">Rust</span>
-                        <span class="tech-tag">Tokio</span>
-                        <span class="tech-tag">SQLite</span>
-                        <span class="tech-tag">WireGuard</span>
-                        <span class="tech-tag">QUIC</span>
-                    </div>
-                </article>
-
-                <!-- infra-operator -->
-                <article class="project-card" data-href="https://infra-operator-aws.runner.codes/">
-                    <div class="project-header">
-                        <div class="project-icon go">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-                            </svg>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://infra-operator-aws.runner.codes/" target="_blank" class="project-link" title="Site">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                    <h3 class="project-title">infra-operator</h3>
-                    <p class="project-tagline">Kubernetes Operator para Infraestrutura AWS</p>
-                    <p class="project-description">
-                        Kubernetes operator pronto para produção para gerenciar recursos AWS usando CRDs.
-                        Suporta 30 serviços AWS incluindo VPC, EC2, RDS, EKS, S3 e mais.
-                        Construído com Kubebuilder e princípios de Clean Architecture.
-                    </p>
-                    <div class="project-features">
-                        <div class="feature">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg>
-                            <span>30 CRDs AWS</span>
-                        </div>
-                        <div class="feature">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg>
-                            <span>Detecção de Drift</span>
-                        </div>
-                        <div class="feature">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg>
-                            <span>Helm Chart</span>
-                        </div>
-                        <div class="feature">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg>
-                            <span>Suporte IRSA</span>
-                        </div>
-                    </div>
-                    <div class="project-tech">
-                        <span class="tech-tag go">Go</span>
-                        <span class="tech-tag">Kubebuilder</span>
-                        <span class="tech-tag">AWS SDK v2</span>
-                        <span class="tech-tag">Helm</span>
-                    </div>
-                </article>
-
-                <!-- runner.codes -->
-                <article class="project-card" data-href="https://runner.codes/">
-                    <div class="project-header">
-                        <div class="project-icon firecracker">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
-                            </svg>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://runner.codes/" target="_blank" class="project-link" title="Site">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                    <h3 class="project-title">runner.codes</h3>
-                    <p class="project-tagline">Execução Segura de Código com Firecracker microVMs</p>
-                    <p class="project-description">
-                        Ambiente de execução LLM rodando código não confiável em microVMs Firecracker isoladas.
-                        Isolamento em nível de hardware via KVM com comunicação vsock.
-                        Suporta 40+ linguagens de programação com cold starts sub-segundo.
-                    </p>
-                    <div class="project-features">
-                        <div class="feature">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg>
-                            <span>40+ Linguagens</span>
-                        </div>
-                        <div class="feature">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg>
-                            <span>~12ms Warm Start</span>
-                        </div>
-                        <div class="feature">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg>
-                            <span>Isolamento KVM</span>
-                        </div>
-                        <div class="feature">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg>
-                            <span>Suporte a Snapshots</span>
-                        </div>
-                    </div>
-                    <div class="project-tech">
-                        <span class="tech-tag go">Go</span>
-                        <span class="tech-tag">Firecracker</span>
-                        <span class="tech-tag">KVM</span>
-                        <span class="tech-tag">vsock</span>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- Destaques Section -->
-    <section id="highlights" class="highlights">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Destaques</span>
-                <h2 class="section-title">edgeProxy - Proxy TCP Distribuído em Rust</h2>
-                <p class="section-description">
-                    Proxy TCP distribuído escrito em Rust, projetado para operar em edge POPs globais.
-                    Roteamento geo-aware, afinidade de sessão, replicação SQLite com SWIM gossip + QUIC.
-                </p>
-            </div>
-
-            <div class="highlights-features">
-                <div class="highlight-feature">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <line x1="2" y1="12" x2="22" y2="12"></line>
-                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            <div class="desktop-icon" data-window="opensource">
+                <div class="icon-image" style="background: linear-gradient(135deg, #8B5CF6 0%, #A78BFA 100%);">
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" stroke="white" stroke-width="1.5" fill="none"/>
+                        <circle cx="8" cy="14" r="2" fill="white"/>
+                        <circle cx="12" cy="14" r="2" fill="white"/>
+                        <circle cx="16" cy="14" r="2" fill="white"/>
                     </svg>
-                    <span>Roteamento GeoIP</span>
                 </div>
-                <div class="highlight-feature">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                    </svg>
-                    <span>TLS Termination</span>
-                </div>
-                <div class="highlight-feature">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-                    </svg>
-                    <span>490+ Testes</span>
-                </div>
-                <div class="highlight-feature">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
-                    </svg>
-                    <span>Arquitetura Hexagonal</span>
-                </div>
+                <span class="icon-label">Open Source</span>
             </div>
 
-            <div class="video-grid">
-                <div class="video-card">
-                    <a href="https://www.youtube.com/watch?v=Qf6TmgFsq1o" target="_blank" class="video-thumbnail">
-                        <img src="https://img.youtube.com/vi/Qf6TmgFsq1o/maxresdefault.jpg" alt="edgeProxy - Visão Geral">
-                        <div class="video-play-btn">
-                            <svg viewBox="0 0 68 48" width="68" height="48">
-                                <path d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#f00"></path>
-                                <path d="M 45,24 27,14 27,34" fill="#fff"></path>
-                            </svg>
-                        </div>
-                    </a>
-                    <h3 class="video-title">edgeProxy - Visão Geral</h3>
+            <div class="desktop-icon" data-window="skills">
+                <div class="icon-image" style="background: linear-gradient(135deg, #6366f1 0%, #818cf8 100%);">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="16 18 22 12 16 6"/>
+                        <polyline points="8 6 2 12 8 18"/>
+                    </svg>
                 </div>
-                <div class="video-card">
-                    <a href="https://www.youtube.com/watch?v=oVotf8lFOJ0" target="_blank" class="video-thumbnail">
-                        <img src="https://img.youtube.com/vi/oVotf8lFOJ0/maxresdefault.jpg" alt="edgeProxy - Demonstração">
-                        <div class="video-play-btn">
-                            <svg viewBox="0 0 68 48" width="68" height="48">
-                                <path d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#f00"></path>
-                                <path d="M 45,24 27,14 27,34" fill="#fff"></path>
-                            </svg>
-                        </div>
-                    </a>
-                    <h3 class="video-title">edgeProxy - Demonstração</h3>
-                </div>
+                <span class="icon-label">Skills</span>
             </div>
 
-            <div class="highlights-cta">
-                <a href="https://edgeproxy-docs.runner.codes/" target="_blank" class="btn btn-secondary">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+            <div class="desktop-icon" data-window="experience">
+                <div class="icon-image" style="background: linear-gradient(135deg, #0d9488 0%, #2dd4bf 100%);">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
                     </svg>
-                    Ver Documentação no GitHub
-                </a>
+                </div>
+                <span class="icon-label">Experiência</span>
+            </div>
+
+            <div class="desktop-icon" data-window="contact">
+                <div class="icon-image" style="background: linear-gradient(135deg, #0ea5e9 0%, #38bdf8 100%);">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                        <polyline points="22,6 12,13 2,6"/>
+                    </svg>
+                </div>
+                <span class="icon-label">Contato</span>
+            </div>
+
+            <div class="desktop-icon" data-window="terminal">
+                <div class="icon-image" style="background: linear-gradient(135deg, #374151 0%, #4b5563 100%);">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="4 17 10 11 4 5"/>
+                        <line x1="12" y1="19" x2="20" y2="19"/>
+                    </svg>
+                </div>
+                <span class="icon-label">Terminal</span>
+            </div>
+
+            <div class="desktop-icon video-icon" data-window="video-runner-codes">
+                <div class="icon-image" style="background: linear-gradient(135deg, #DC2626 0%, #EF4444 100%);">
+                    <svg viewBox="0 0 24 24" fill="white">
+                        <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+                    </svg>
+                </div>
+                <span class="icon-label">Runner Codes</span>
+            </div>
+
+            <div class="desktop-icon video-icon" data-window="video-edge-resiliente">
+                <div class="icon-image" style="background: linear-gradient(135deg, #DC2626 0%, #EF4444 100%);">
+                    <svg viewBox="0 0 24 24" fill="white">
+                        <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+                    </svg>
+                </div>
+                <span class="icon-label">Edge Resiliente</span>
+            </div>
+
+            <div class="desktop-icon video-icon" data-window="video-edgeproxy-caos">
+                <div class="icon-image" style="background: linear-gradient(135deg, #DC2626 0%, #EF4444 100%);">
+                    <svg viewBox="0 0 24 24" fill="white">
+                        <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+                    </svg>
+                </div>
+                <span class="icon-label">Do Caos ao Controle com o edgeProxy</span>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Sobre Mim</span>
-                <h2 class="section-title">Construindo o Futuro da Infraestrutura Cloud</h2>
-            </div>
-
-            <div class="about-summary">
-                <p class="about-lead">
-                    Engenheiro de Plataformas e Arquiteto Cloud Native com mais de <strong>20 anos de experiência</strong> em infraestrutura escalável, Kubernetes, automação, SRE, DevOps e sistemas distribuídos. Atuação profunda em multi-cloud (AWS, GCP, Azure, OCI), criação de plataformas internas, padronização arquitetural, pipelines CI/CD, governança de confiabilidade e observabilidade.
-                </p>
-                <p class="about-lead">
-                    Liderança técnica em projetos de alta complexidade, incluindo <strong>LLMs, IA Generativa, RAG, agentes autônomos e pipelines MCP</strong>, com foco em performance, custo, segurança e escalabilidade. Experiência robusta em Go, Rust, Python, Terraform, Ansible, Istio, IaC, automação de provisionamento e Service Mesh, além de atuação estratégica em P&D, definição de roadmaps técnicos e mentoring de equipes.
-                </p>
-            </div>
-
-            <div class="about-highlights">
-                <h3 class="highlights-title">Pontos Técnicos e Experiência</h3>
-                <div class="highlights-grid">
-                    <div class="highlight-category">
-                        <h4>Containers & Kubernetes</h4>
-                        <ul>
-                            <li>Deploy de serviços com containers (Kubernetes, Docker, Kaniko) em cloud e on-premises</li>
-                            <li>Gestão de clusters Kubernetes (EKS, GKE, AKS, OCI): provisionamento, upgrade, troubleshooting</li>
-                            <li>Projetos IoT com Kubernetes (k3s, k0s), integração edge-cloud</li>
-                            <li>Templates Helm 3, parametrização de deploys e gestão de ambientes</li>
-                        </ul>
-                    </div>
-                    <div class="highlight-category">
-                        <h4>Infrastructure as Code</h4>
-                        <ul>
-                            <li>Arquitetura e automação com Terraform e Ansible, módulos reutilizáveis</li>
-                            <li>Ambientes multi-cloud, cloud privada, bare metal e redes de alta performance</li>
-                            <li>Governança de ambientes híbridos, gestão de custos e otimização</li>
-                            <li>Providers customizados e automação de provisionamento</li>
-                        </ul>
-                    </div>
-                    <div class="highlight-category">
-                        <h4>Service Mesh & Networking</h4>
-                        <ul>
-                            <li>Operação de Service Mesh (Istio): mTLS, VirtualServices, Gateways, rate limit</li>
-                            <li>APIs e Load Balancers (Kong, Nginx, Istio, Keycloak)</li>
-                            <li>Networking avançado: TCP/IP, firewalls, roteamento, DNS, VPN</li>
-                            <li>VPNs (WireGuard, OpenVPN) para integração cloud e bare metal</li>
-                        </ul>
-                    </div>
-                    <div class="highlight-category">
-                        <h4>CI/CD & DevSecOps</h4>
-                        <ul>
-                            <li>CI/CD (GitLab, Bitbucket, GitHub Actions, Tekton) para build, teste e deploy</li>
-                            <li>Segurança DevSecOps: SAST, DAST, IAST, scanning de leaks, compliance</li>
-                            <li>Testes automatizados de software, infraestrutura e segurança</li>
-                            <li>Integração de sistemas críticos e resposta a incidentes</li>
-                        </ul>
-                    </div>
-                    <div class="highlight-category">
-                        <h4>Observabilidade</h4>
-                        <ul>
-                            <li>Monitoramento (Prometheus, Grafana, Datadog, Dynatrace, NewRelic)</li>
-                            <li>APM, logging distribuído e tracing</li>
-                            <li>Arquitetura escalável e tolerante a falhas para alta demanda</li>
-                            <li>Ambientes regulados e alta disponibilidade</li>
-                        </ul>
-                    </div>
-                    <div class="highlight-category">
-                        <h4>Liderança & Cultura</h4>
-                        <ul>
-                            <li>Liderança técnica em modernização e transformação digital</li>
-                            <li>Documentação, treinamento e padronização de práticas DevOps</li>
-                            <li>Definição de roadmaps técnicos e mentoring de equipes</li>
-                            <li>Disseminação de cultura DevOps e Cloud Native</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="about-skills-row">
-                <div class="skills-group">
-                    <h4 class="skills-title">Cloud & Plataformas</h4>
-                    <div class="skills-list">
-                        <span class="skill">Kubernetes</span>
-                        <span class="skill">AWS</span>
-                        <span class="skill">GCP</span>
-                        <span class="skill">Azure</span>
-                        <span class="skill">OCI</span>
-                        <span class="skill">Terraform</span>
-                        <span class="skill">Istio</span>
-                    </div>
-                </div>
-                <div class="skills-group">
-                    <h4 class="skills-title">Linguagens</h4>
-                    <div class="skills-list">
-                        <span class="skill">Go</span>
-                        <span class="skill">Rust</span>
-                        <span class="skill">Python</span>
-                        <span class="skill">Node.js</span>
-                        <span class="skill">Java</span>
-                    </div>
-                </div>
-                <div class="skills-group">
-                    <h4 class="skills-title">AI & LLMs</h4>
-                    <div class="skills-list">
-                        <span class="skill">RAG Pipelines</span>
-                        <span class="skill">Agentic AI</span>
-                        <span class="skill">Vertex AI</span>
-                        <span class="skill">Bedrock</span>
-                        <span class="skill">MCP</span>
-                    </div>
-                </div>
-            </div>
+    <!-- Dock -->
+    <div class="dock">
+        <div class="dock-item" data-window="about" title="Sobre Mim">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                <circle cx="12" cy="7" r="4"/>
+            </svg>
         </div>
-    </section>
-
-
-    <!-- Experience Timeline -->
-    <section id="experience" class="experience">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Carreira</span>
-                <h2 class="section-title">Experiência Profissional</h2>
-            </div>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3 class="timeline-title">Especialista em P&D</h3>
-                            <span class="timeline-company">Zaia</span>
-                            <span class="timeline-date">2023 - 2025</span>
-                        </div>
-                        <p class="timeline-description">
-                            Arquitetei pipelines RAG completos com embeddings, vetorização e reranking.
-                            Desenvolvi MCPs e agentes autônomos (Agentic AI). Deploy e otimização de LLMs
-                            usando Vertex AI e Amazon Bedrock.
-                        </p>
-                        <div class="timeline-tags">
-                            <span>RAG</span>
-                            <span>LLMs</span>
-                            <span>Go</span>
-                            <span>Vertex AI</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3 class="timeline-title">Arquiteto Cloud</h3>
-                            <span class="timeline-company">Builders</span>
-                            <span class="timeline-date">2019 - 2023</span>
-                        </div>
-                        <p class="timeline-description">
-                            Arquitetei e operei clusters Kubernetes em EKS, GKE, AKS e OCI.
-                            Implementei Istio Service Mesh com mTLS e topologias complexas.
-                            Liderei projetos de modernização cloud e padronização DevOps.
-                        </p>
-                        <div class="timeline-tags">
-                            <span>Kubernetes</span>
-                            <span>Istio</span>
-                            <span>Terraform</span>
-                            <span>GitOps</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3 class="timeline-title">Arquiteto de Software</h3>
-                            <span class="timeline-company">Bradesco</span>
-                            <span class="timeline-date">2015 - 2017</span>
-                        </div>
-                        <p class="timeline-description">
-                            Arquitetei plataformas bancárias de missão crítica com foco em segurança,
-                            performance e compliance. Construí pipelines CI/CD com SAST/DAST e
-                            liderei war rooms e análise de causa raiz para incidentes críticos.
-                        </p>
-                        <div class="timeline-tags">
-                            <span>Bancário</span>
-                            <span>DevSecOps</span>
-                            <span>Microservices</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3 class="timeline-title">Arquiteto Cloud</h3>
-                            <span class="timeline-company">eManage Solutions (Canadá)</span>
-                            <span class="timeline-date">2017</span>
-                        </div>
-                        <p class="timeline-description">
-                            Modernizei ambientes multi-cloud e híbridos com ênfase em segurança
-                            e automação. Construí CI/CD multi-ambiente com Jenkins, Chef e Ansible.
-                        </p>
-                        <div class="timeline-tags">
-                            <span>Multi-Cloud</span>
-                            <span>IaC</span>
-                            <span>CI/CD</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3 class="timeline-title">Consultor</h3>
-                            <span class="timeline-company">AndreBassi.com.br</span>
-                            <span class="timeline-date">2005 - 2014</span>
-                        </div>
-                        <p class="timeline-description">
-                            Consultoria especializada em arquitetura de sistemas distribuídos e automação.
-                            Construí plataformas escaláveis e integrações complexas. Liderei migrações cloud
-                            e adoção de DevOps/SRE para múltiplas empresas.
-                        </p>
-                        <div class="timeline-tags">
-                            <span>Consultoria</span>
-                            <span>Arquitetura</span>
-                            <span>DevOps</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="dock-item" data-window="opensource" title="Open Source">
+            <svg viewBox="0 0 24 24" fill="none">
+                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" stroke="white" stroke-width="1.5" fill="none"/>
+                <circle cx="8" cy="14" r="2" fill="white"/>
+                <circle cx="12" cy="14" r="2" fill="white"/>
+                <circle cx="16" cy="14" r="2" fill="white"/>
+            </svg>
         </div>
-    </section>
+        <div class="dock-item" data-window="skills" title="Skills">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="16 18 22 12 16 6"/>
+                <polyline points="8 6 2 12 8 18"/>
+            </svg>
+        </div>
+        <div class="dock-item" data-window="experience" title="Experiência">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+            </svg>
+        </div>
+        <div class="dock-item" data-window="contact" title="Contato">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+            </svg>
+        </div>
+        <div class="dock-separator"></div>
+        <div class="dock-item" data-window="terminal" title="Terminal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="4 17 10 11 4 5"/>
+                <line x1="12" y1="19" x2="20" y2="19"/>
+            </svg>
+        </div>
+        <div class="dock-item" data-link="https://github.com/andrebassi" title="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+            </svg>
+        </div>
+        <div class="dock-item" data-link="https://x.com/andrebassi" title="X">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+        </div>
+        <div class="dock-item" data-link="https://linkedin.com/in/andrebassi" title="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+        </div>
+    </div>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="contact-content">
-                <span class="section-tag">Contato</span>
-                <h2 class="section-title">Vamos Construir Algo Juntos</h2>
-                <p class="contact-description">
-                    Se você está procurando um Engenheiro de Plataforma, precisa de consultoria em
-                    arquitetura cloud, ou quer discutir colaboração open source - adoraria ouvir de você.
-                </p>
-                <div class="contact-links">
-                    <a href="mailto:contato@andrebassi.com.br" class="contact-link email">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                            <polyline points="22,6 12,13 2,6"></polyline>
-                        </svg>
-                        <span>contato@andrebassi.com.br</span>
-                    </a>
-                    <a href="https://api.whatsapp.com/send?phone=+5511980163397&text=Ol%C3%A1%2C+preciso+falar+com+voc%C3%AA" target="_blank" class="contact-link whatsapp">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-                        </svg>
-                        <span>WhatsApp</span>
-                    </a>
-                    <a href="https://linkedin.com/in/andrebassi" target="_blank" class="contact-link linkedin">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                        </svg>
-                        <span>LinkedIn</span>
-                    </a>
-                    <a href="https://github.com/andrebassi" target="_blank" class="contact-link github">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                        </svg>
-                        <span>GitHub</span>
-                    </a>
-                    <a href="https://x.com/andrebassi" target="_blank" class="contact-link twitter">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                        </svg>
-                        <span>X / Twitter</span>
-                    </a>
+    <!-- Windows Container -->
+    <div class="windows-container" id="windows-container">
+        <!-- Windows will be created dynamically -->
+    </div>
+
+    <!-- Window Templates -->
+    <template id="window-template">
+        <div class="window">
+            <div class="window-header">
+                <div class="window-controls">
+                    <button class="window-btn close" title="Fechar"></button>
+                    <button class="window-btn minimize" title="Minimizar"></button>
+                    <button class="window-btn maximize" title="Maximizar"></button>
                 </div>
+                <div class="window-title"></div>
+                <div class="window-spacer"></div>
             </div>
+            <div class="window-content"></div>
         </div>
-    </section>
+    </template>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <p class="footer-text">
-                    &copy; 2025 André Bassi. Construído com paixão por infraestrutura.
-                </p>
-                <p class="footer-location">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                        <circle cx="12" cy="10" r="3"></circle>
-                    </svg>
-                    Barueri, SP - Brasil
-                </p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- JavaScript Modules -->
-    <script src="js/variables.js"></script>
-    <script src="js/particles.js"></script>
-    <script src="js/navigation.js"></script>
-    <script src="js/animations.js"></script>
-    <script src="js/christmas.js"></script>
-    <script src="js/newyear.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/desktop.js"></script>
 </body>
 </html>

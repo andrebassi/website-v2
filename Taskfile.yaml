@@ -1,122 +1,14 @@
 version: '3'
 
-vars:
-  PROJECT_NAME: andrebassi-website
-  DOMAIN: andrebassi.com.br
-  CLOUDFLARE_API_TOKEN:
-    sh: echo $CLOUDFLARE_API_TOKEN
-
 tasks:
-  default:
-    desc: Lista todas as tasks disponíveis
-    cmds:
-      - task --list
-
-  # ===== Deploy & Publish =====
-  deploy:
-    desc: Deploy do site para Cloudflare Pages
-    cmds:
-      - npx wrangler pages deploy . --project-name={{.PROJECT_NAME}} --commit-dirty=true
-
-  publish:
-    desc: Alias para deploy
-    cmds:
-      - task: deploy
-
-  deploy:preview:
-    desc: Deploy preview (sem afetar produção)
-    cmds:
-      - npx wrangler pages deploy . --project-name={{.PROJECT_NAME}} --branch=preview --commit-dirty=true
-
-  # ===== Development =====
-  dev:
-    desc: Inicia servidor local de desenvolvimento
+  serve:
+    desc: Serve the website locally on port 8080
     cmds:
       - python3 -m http.server 8080
+    dir: '{{.ROOT_DIR}}'
 
-  dev:open:
-    desc: Inicia servidor local e abre no browser
+  serve:3000:
+    desc: Serve the website locally on port 3000
     cmds:
-      - open http://localhost:8080 && python3 -m http.server 8080
-
-  # ===== Status & Info =====
-  status:
-    desc: Mostra status do projeto no Cloudflare Pages
-    cmds:
-      - npx wrangler pages project list | grep -A1 "{{.PROJECT_NAME}}"
-
-  domains:
-    desc: Lista domínios customizados do projeto
-    cmds:
-      - |
-        curl -s -X GET "https://api.cloudflare.com/client/v4/accounts/e11c18594fd320087af6f18de03012b7/pages/projects/{{.PROJECT_NAME}}/domains" \
-          -H "Authorization: Bearer {{.CLOUDFLARE_API_TOKEN}}" | jq -r '.result[] | "\(.name): \(.status)"'
-
-  deployments:
-    desc: Lista últimos deployments
-    cmds:
-      - npx wrangler pages deployment list --project-name={{.PROJECT_NAME}}
-
-  # ===== Testing =====
-  test:urls:
-    desc: Testa se os domínios estão respondendo
-    cmds:
-      - |
-        echo "Testing https://{{.DOMAIN}}..."
-        curl -sI "https://{{.DOMAIN}}" | head -1
-        echo "Testing https://www.{{.DOMAIN}}..."
-        curl -sI "https://www.{{.DOMAIN}}" | head -1
-        echo "Testing https://{{.PROJECT_NAME}}.pages.dev..."
-        curl -sI "https://{{.PROJECT_NAME}}.pages.dev" | head -1
-
-  test:redirects:
-    desc: Testa redirects de URLs amigáveis
-    cmds:
-      - |
-        echo "Testing /opensource..."
-        curl -sI "https://{{.DOMAIN}}/opensource" | grep -E "^(HTTP|location)"
-        echo ""
-        echo "Testing /projetos..."
-        curl -sI "https://{{.DOMAIN}}/projetos" | grep -E "^(HTTP|location)"
-        echo ""
-        echo "Testing /sobre..."
-        curl -sI "https://{{.DOMAIN}}/sobre" | grep -E "^(HTTP|location)"
-
-  # ===== Git & Commit =====
-  commit:
-    desc: Commit das alterações
-    cmds:
-      - git add .
-      - git status
-      - echo "---"
-      - echo "Use 'git commit -m \"mensagem\"' para commitar"
-
-  push:
-    desc: Push e deploy
-    cmds:
-      - git push
-      - task: deploy
-
-  # ===== Seasonal Effects Testing =====
-  test:xmas:
-    desc: Abre site com efeito de Natal forçado
-    cmds:
-      - open "http://localhost:8080?xmas=true"
-
-  test:newyear:
-    desc: Abre site com efeito de Ano Novo forçado
-    cmds:
-      - open "http://localhost:8080?newyear=true"
-
-  # ===== Cache & Purge =====
-  purge:cache:
-    desc: Limpa cache do Cloudflare para o domínio
-    vars:
-      ZONE_ID: 4ea69513a66da025e6dbf314887825b1
-    cmds:
-      - |
-        curl -s -X POST "https://api.cloudflare.com/client/v4/zones/{{.ZONE_ID}}/purge_cache" \
-          -H "Authorization: Bearer {{.CLOUDFLARE_API_TOKEN}}" \
-          -H "Content-Type: application/json" \
-          --data '{"purge_everything":true}' | jq -r '.success'
-        echo "Cache purged!"
+      - python3 -m http.server 3000
+    dir: '{{.ROOT_DIR}}'
