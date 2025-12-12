@@ -1,0 +1,53 @@
+/* ===== Keyframe Animations ===== */
+
+/* Tagline Glow */
+@keyframes tagline-glow {
+    0%, 100% {
+        box-shadow: 0 0 5px rgba(34, 197, 94, 0.1), 0 0 10px rgba(34, 197, 94, 0.05);
+        border-color: var(--border-color);
+    }
+    50% {
+        box-shadow: 0 0 12px rgba(34, 197, 94, 0.2), 0 0 20px rgba(34, 197, 94, 0.1);
+        border-color: rgba(34, 197, 94, 0.3);
+    }
+}
+
+/* Badge Glow */
+@keyframes badge-glow {
+    0%, 100% {
+        box-shadow: 0 0 5px rgba(34, 197, 94, 0.1), 0 0 10px rgba(34, 197, 94, 0.05);
+        border-color: var(--border-color);
+    }
+    50% {
+        box-shadow: 0 0 15px rgba(34, 197, 94, 0.2), 0 0 30px rgba(34, 197, 94, 0.1);
+        border-color: rgba(34, 197, 94, 0.3);
+    }
+}
+
+/* Pulse */
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+/* Blink (cursor) */
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
+/* Scroll indicator */
+@keyframes scroll {
+    0%, 100% { opacity: 1; top: 8px; }
+    50% { opacity: 0.3; top: 20px; }
+}
+
+/* ===== Reduced Motion ===== */
+@media (prefers-reduced-motion: no-preference) {
+    .project-card,
+    .timeline-content,
+    .contact-link,
+    .btn {
+        transition: all var(--transition-base);
+    }
+}

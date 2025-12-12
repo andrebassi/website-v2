@@ -1,0 +1,23 @@
+# SPA routes - middleware handles language
+/opensource/* /index.html 200!
+/opensource /index.html 200!
+/projetos/* /index.html 200!
+/projetos /index.html 200!
+/projects/* /index.html 200!
+/projects /index.html 200!
+/destaques/* /index.html 200!
+/destaques /index.html 200!
+/highlights/* /index.html 200!
+/highlights /index.html 200!
+/sobre/* /index.html 200!
+/sobre /index.html 200!
+/about/* /index.html 200!
+/about /index.html 200!
+/experiencia/* /index.html 200!
+/experiencia /index.html 200!
+/experience/* /index.html 200!
+/experience /index.html 200!
+/contato/* /index.html 200!
+/contato /index.html 200!
+/contact/* /index.html 200!
+/contact /index.html 200!
