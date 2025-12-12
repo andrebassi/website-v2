@@ -696,7 +696,7 @@ class DesktopOS {
 
                         <div class="skills-grid">
                             <div class="skill-category">
-                                <h3>🐳 Containers & Kubernetes</h3>
+                                <h3>Containers & Kubernetes</h3>
                                 <ul>
                                     <li>Deploy de serviços com containers (Kubernetes, Docker, Kaniko) em cloud e on-premises</li>
                                     <li>Gestão de clusters Kubernetes (EKS, GKE, AKS, OCI): provisionamento, upgrade, troubleshooting</li>
@@ -706,7 +706,7 @@ class DesktopOS {
                             </div>
 
                             <div class="skill-category">
-                                <h3>🏗️ Infrastructure as Code</h3>
+                                <h3>Infrastructure as Code</h3>
                                 <ul>
                                     <li>Arquitetura e automação com Terraform e Ansible, módulos reutilizáveis</li>
                                     <li>Ambientes multi-cloud, cloud privada, bare metal e redes de alta performance</li>
@@ -716,7 +716,7 @@ class DesktopOS {
                             </div>
 
                             <div class="skill-category">
-                                <h3>🌐 Service Mesh & Networking</h3>
+                                <h3>Service Mesh & Networking</h3>
                                 <ul>
                                     <li>Operação de Service Mesh (Istio): mTLS, VirtualServices, Gateways, rate limit</li>
                                     <li>APIs e Load Balancers (Kong, Nginx, Istio, Keycloak)</li>
@@ -726,7 +726,7 @@ class DesktopOS {
                             </div>
 
                             <div class="skill-category">
-                                <h3>🔄 CI/CD & DevSecOps</h3>
+                                <h3>CI/CD & DevSecOps</h3>
                                 <ul>
                                     <li>CI/CD (GitLab, Bitbucket, GitHub Actions, Tekton) para build, teste e deploy</li>
                                     <li>Segurança DevSecOps: SAST, DAST, IAST, scanning de leaks, compliance</li>
@@ -736,7 +736,7 @@ class DesktopOS {
                             </div>
 
                             <div class="skill-category">
-                                <h3>📊 Observabilidade</h3>
+                                <h3>Observabilidade</h3>
                                 <ul>
                                     <li>Monitoramento (Prometheus, Grafana, Datadog, Dynatrace, NewRelic)</li>
                                     <li>APM, logging distribuído e tracing</li>
@@ -746,7 +746,7 @@ class DesktopOS {
                             </div>
 
                             <div class="skill-category">
-                                <h3>👥 Liderança & Cultura</h3>
+                                <h3>Liderança & Cultura</h3>
                                 <ul>
                                     <li>Liderança técnica em modernização e transformação digital</li>
                                     <li>Documentação, treinamento e padronização de práticas DevOps</li>
