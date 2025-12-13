@@ -49,6 +49,37 @@ body {
 }
 
 /* Wallpaper Container */
+/* Video Background */
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    overflow: hidden;
+    display: none; /* Controlled by JS based on --bg-mode */
+}
+
+.video-background video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.video-background video.active {
+    opacity: 1;
+}
+
+/* Wallpaper Container (Image Slideshow) */
 .wallpaper-container {
     position: absolute;
     top: 0;
@@ -56,6 +87,7 @@ body {
     right: 0;
     bottom: 0;
     z-index: 0;
+    display: none; /* Controlled by JS based on --bg-mode */
 }
 
 .wallpaper {

@@ -10,11 +10,80 @@ class DesktopOS {
 
         this.setupEventListeners();
         this.startClock();
-        this.startWallpaperRotation();
+        this.initBackgroundMode();
+    }
+
+    initBackgroundMode() {
+        const bgMode = CONFIG.backgroundMode || 'images';
+        const videoBg = document.getElementById('video-bg');
+        const wallpaperBg = document.getElementById('wallpaper-bg');
+
+        if (bgMode === 'video') {
+            if (videoBg) {
+                videoBg.style.display = 'block';
+                this.startVideoRotation();
+            }
+            if (wallpaperBg) wallpaperBg.style.display = 'none';
+        } else {
+            if (videoBg) videoBg.style.display = 'none';
+            if (wallpaperBg) {
+                wallpaperBg.style.display = 'block';
+                this.startWallpaperRotation();
+            }
+        }
+    }
+
+    startVideoRotation() {
+        const videos = CONFIG.backgroundVideos || [];
+        if (videos.length === 0) return;
+
+        const video1 = document.getElementById('bg-video-1');
+        const video2 = document.getElementById('bg-video-2');
+        if (!video1 || !video2) return;
+
+        let currentIndex = 0;
+        let activeVideo = video1;
+        let nextVideo = video2;
+
+        // Set first video
+        video1.src = videos[currentIndex];
+        video1.load();
+        video1.play();
+        video1.classList.add('active');
+
+        // Preload second video
+        const nextIndex = (currentIndex + 1) % videos.length;
+        video2.src = videos[nextIndex];
+        video2.load();
+
+        // Rotate videos with crossfade
+        const interval = CONFIG.videoRotationInterval || 30000;
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % videos.length;
+
+            // Swap active/next videos
+            const temp = activeVideo;
+            activeVideo = nextVideo;
+            nextVideo = temp;
+
+            // Crossfade
+            activeVideo.play();
+            activeVideo.classList.add('active');
+            nextVideo.classList.remove('active');
+
+            // Preload next video after transition
+            setTimeout(() => {
+                const preloadIndex = (currentIndex + 1) % videos.length;
+                nextVideo.src = videos[preloadIndex];
+                nextVideo.load();
+            }, 1500);
+        }, interval);
     }
 
     startWallpaperRotation() {
         const wallpapers = document.querySelectorAll('.wallpaper');
+        if (wallpapers.length === 0) return;
+
         let currentIndex = 0;
 
         // Rotate every 10 seconds
@@ -29,7 +98,7 @@ class DesktopOS {
         const updateClock = () => {
             const now = new Date();
             const options = { weekday: 'short', day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' };
-            document.getElementById('clock').textContent = now.toLocaleDateString('pt-BR', options);
+            document.getElementById('clock').textContent = now.toLocaleDateString('pt-BR', options).replace(/\./g, '');
         };
         updateClock();
         setInterval(updateClock, 1000);
