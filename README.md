@@ -1,4 +1,4 @@
-# v2.andrebassi.com.br
+# desktop.andrebassi.com.br
 
 Ubuntu Desktop-style portfolio website showcasing my work as a Staff Platform Engineer & Cloud Native Architect.
 
@@ -114,4 +114,4 @@ MIT License - feel free to use this as inspiration for your own portfolio!
 
 ---
 
-**Live Site**: [v2.andrebassi.com.br](https://v2.andrebassi.com.br)
+**Live Site**: [desktop.andrebassi.com.br](https://desktop.andrebassi.com.br)

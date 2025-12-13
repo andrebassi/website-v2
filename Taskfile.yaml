@@ -2,7 +2,7 @@ version: '3'
 
 vars:
   PROJECT_NAME: andrebassi-website-v2
-  DOMAIN: v2.andrebassi.com.br
+  DOMAIN: desktop.andrebassi.com.br
   CLOUDFLARE_API_TOKEN:
     sh: echo $CLOUDFLARE_API_TOKEN
 
