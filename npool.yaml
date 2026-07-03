@@ -1,0 +1,15 @@
+app:
+  name: andrebassi
+  region: eu-west
+
+build:
+  dockerfile: Dockerfile
+
+http_service:
+  internal_port: 8080
+
+machines:
+  - count: 1
+    vcpus: 1
+    memory: 1gb
+    hostname: andrebassi.npool.cloud
